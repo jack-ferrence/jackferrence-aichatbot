@@ -108,6 +108,21 @@ Message   id, chatId → Chat, role (user | assistant), content, createdAt
   Auth.js manages automatically — there is no custom cookie handling.
 - `src/proxy.ts` (Next.js's proxy/middleware convention) redirects unauthenticated
   requests to `/sign-in` and authenticated users away from `/sign-in` and `/sign-up`.
+  Its matcher deliberately excludes `/api/*` (API routes can't usefully be redirected
+  to a sign-in page) — every chat/message API route calls `auth()` itself and returns
+  401 if there's no session, so authorization doesn't depend on the proxy running.
+- The Credentials `authorize()` callback runs `bcrypt.compare()` against a dummy hash
+  when the email doesn't exist, so a login attempt takes the same amount of time
+  whether or not the account is real. Without this, an unknown email returns
+  near-instantly (no hash to compare against) while a real one takes the full
+  bcrypt time, letting an attacker enumerate registered emails by timing responses.
+- `/api/register` does return a distinct "account already exists" error for a
+  duplicate email (a 409, not a generic failure). That's a conscious tradeoff, not an
+  oversight: telling users their email is already registered is standard sign-up UX
+  (GitHub, Google, etc. all do this), and treating it as a security leak would mean
+  either silently failing sign-up for existing users or emailing a "did you mean to
+  sign in?" notice — the latter is the more correct fix but needs an email-sending
+  system this project doesn't have.
 
 ## Ownership enforcement
 
