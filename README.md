@@ -1,4 +1,4 @@
-# Atlas Chat
+# Jack Ferrence AI Chat
 
 A secure, multi-user AI chat workspace. Every user signs in, keeps their own set of
 conversations, and talks to Claude through a server-side integration — the browser
