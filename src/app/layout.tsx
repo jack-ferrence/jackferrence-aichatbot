@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Atlas Chat",
+  title: "TakeHome",
   description: "A secure workspace for conversations with Atlas.",
 };
 

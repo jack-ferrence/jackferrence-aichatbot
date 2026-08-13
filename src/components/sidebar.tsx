@@ -21,7 +21,7 @@ export function Sidebar({
       <div className="flex items-center gap-2.5 px-5 py-5">
         <AtlasIcon className="h-7 w-7" />
         <span className="text-base font-semibold tracking-tight text-white">
-          Atlas Chat
+          TakeHome
         </span>
       </div>
 

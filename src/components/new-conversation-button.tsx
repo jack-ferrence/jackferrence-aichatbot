@@ -25,7 +25,7 @@ export function NewConversationButton() {
       type="button"
       onClick={handleClick}
       disabled={isCreating}
-      className="flex w-full items-center justify-center gap-2 rounded-lg bg-atlas-blue-500 px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-atlas-blue-400 disabled:cursor-not-allowed disabled:opacity-60"
+      className="flex w-full items-center justify-center gap-2 rounded-lg bg-atlas-lime-400 px-3 py-2.5 text-sm font-semibold text-atlas-navy-950 transition hover:bg-atlas-lime-300 disabled:cursor-not-allowed disabled:opacity-60"
     >
       <span aria-hidden="true" className="text-base leading-none">
         +

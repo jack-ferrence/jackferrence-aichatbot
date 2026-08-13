@@ -25,8 +25,8 @@ export function AtlasIcon({ className }: { className?: string }) {
           y2="27"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#4c86ff" />
-          <stop offset="1" stopColor="#22d3ee" />
+          <stop stopColor="#2f6fed" />
+          <stop offset="1" stopColor="#c6f135" />
         </linearGradient>
         <linearGradient
           id="atlas-icon-gradient-2"
@@ -36,8 +36,8 @@ export function AtlasIcon({ className }: { className?: string }) {
           y2="20"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#22d3ee" />
-          <stop offset="1" stopColor="#4c86ff" />
+          <stop stopColor="#c6f135" />
+          <stop offset="1" stopColor="#2f6fed" />
         </linearGradient>
       </defs>
     </svg>

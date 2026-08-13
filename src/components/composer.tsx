@@ -29,7 +29,7 @@ export function Composer({
 
   return (
     <div className="border-t border-slate-200 bg-white px-4 py-4 sm:px-8">
-      <div className="mx-auto flex max-w-3xl items-end gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-2.5 shadow-sm focus-within:border-atlas-blue-500 focus-within:ring-2 focus-within:ring-atlas-blue-500/15">
+      <div className="mx-auto flex max-w-3xl items-end gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-2.5 shadow-sm focus-within:border-atlas-lime-400 focus-within:ring-2 focus-within:ring-atlas-lime-400/25">
         <textarea
           value={value}
           onChange={(event) => setValue(event.target.value)}
@@ -43,7 +43,7 @@ export function Composer({
           type="button"
           onClick={submit}
           disabled={disabled || !value.trim()}
-          className="shrink-0 rounded-xl bg-atlas-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-atlas-blue-400 disabled:cursor-not-allowed disabled:opacity-40"
+          className="shrink-0 rounded-xl bg-atlas-lime-400 px-4 py-2.5 text-sm font-semibold text-atlas-navy-950 transition hover:bg-atlas-lime-300 disabled:cursor-not-allowed disabled:opacity-40"
         >
           Send
         </button>

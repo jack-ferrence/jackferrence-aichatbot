@@ -18,7 +18,7 @@ export function AuthCard({
         <div className="mb-8 flex flex-col items-center gap-3">
           <AtlasIcon className="h-9 w-9" />
           <div className="text-center">
-            <p className="text-lg font-semibold tracking-tight text-white">Atlas Chat</p>
+            <p className="text-lg font-semibold tracking-tight text-white">TakeHome</p>
             <p className="text-sm text-atlas-slate-300">{subtitle}</p>
           </div>
         </div>

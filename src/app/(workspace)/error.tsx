@@ -16,12 +16,12 @@ export default function WorkspaceError({
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-4 bg-white px-6 text-center">
       <p className="text-sm font-medium text-amber-700">
-        Something went wrong loading Atlas Chat.
+        Something went wrong loading TakeHome.
       </p>
       <button
         type="button"
         onClick={reset}
-        className="rounded-lg bg-atlas-blue-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-atlas-blue-400"
+        className="rounded-lg bg-atlas-lime-400 px-4 py-2 text-sm font-semibold text-atlas-navy-950 transition hover:bg-atlas-lime-300"
       >
         Try again
       </button>

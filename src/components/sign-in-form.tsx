@@ -46,7 +46,7 @@ export function SignInForm() {
           autoComplete="email"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-atlas-navy-900 outline-none transition focus:border-atlas-blue-500 focus:ring-2 focus:ring-atlas-blue-500/20"
+          className="rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-atlas-navy-900 outline-none transition focus:border-atlas-lime-400 focus:ring-2 focus:ring-atlas-lime-400/25"
         />
       </div>
       <div className="flex flex-col gap-1.5">
@@ -60,7 +60,7 @@ export function SignInForm() {
           autoComplete="current-password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-          className="rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-atlas-navy-900 outline-none transition focus:border-atlas-blue-500 focus:ring-2 focus:ring-atlas-blue-500/20"
+          className="rounded-lg border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-atlas-navy-900 outline-none transition focus:border-atlas-lime-400 focus:ring-2 focus:ring-atlas-lime-400/25"
         />
       </div>
 
@@ -73,7 +73,7 @@ export function SignInForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-2 rounded-lg bg-atlas-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-atlas-blue-400 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-2 rounded-lg bg-atlas-lime-400 px-4 py-2.5 text-sm font-semibold text-atlas-navy-950 transition hover:bg-atlas-lime-300 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {isSubmitting ? "Signing in..." : "Sign in"}
       </button>

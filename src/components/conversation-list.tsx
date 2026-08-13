@@ -41,7 +41,7 @@ export function ConversationList({ chats }: { chats: ChatSummary[] }) {
               href={href}
               className={`flex items-center justify-between gap-2 rounded-lg px-3 py-2.5 text-sm transition ${
                 isActive
-                  ? "bg-atlas-navy-800 text-white"
+                  ? "bg-atlas-navy-800 text-white ring-1 ring-inset ring-atlas-lime-400/40"
                   : "text-atlas-slate-300 hover:bg-atlas-navy-800/60 hover:text-white"
               }`}
             >

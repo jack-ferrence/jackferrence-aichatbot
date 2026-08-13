@@ -15,6 +15,8 @@
   --atlas-blue-400: #4c86ff;
   --atlas-cyan-400: #22d3ee;
   --atlas-amber-500: #f59e0b;
+  --atlas-lime-400: #c6f135;
+  --atlas-lime-300: #d8f76d;
 }
 
 @theme inline {
@@ -34,6 +36,8 @@
   --color-atlas-blue-400: var(--atlas-blue-400);
   --color-atlas-cyan-400: var(--atlas-cyan-400);
   --color-atlas-amber-500: var(--atlas-amber-500);
+  --color-atlas-lime-400: var(--atlas-lime-400);
+  --color-atlas-lime-300: var(--atlas-lime-300);
 }
 
 body {

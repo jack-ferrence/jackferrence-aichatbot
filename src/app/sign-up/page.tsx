@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AuthCard } from "@/components/auth-card";
 import { SignUpForm } from "@/components/sign-up-form";
 
-export const metadata = { title: "Create account — Atlas Chat" };
+export const metadata = { title: "Create account — TakeHome" };
 
 export default function SignUpPage() {
   return (
@@ -12,7 +12,7 @@ export default function SignUpPage() {
       footer={
         <>
           Already have an account?{" "}
-          <Link href="/sign-in" className="font-medium text-atlas-cyan-400 hover:underline">
+          <Link href="/sign-in" className="font-medium text-atlas-lime-400 hover:underline">
             Sign in
           </Link>
         </>
