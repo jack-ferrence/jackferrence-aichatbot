@@ -177,13 +177,14 @@ server (not just reading the code):
 - The Claude integration's **failure path**: with no `ANTHROPIC_API_KEY` set, sending
   a message returns a clean 502/500 and the UI shows a readable error instead of
   crashing, both from the empty-state composer and from an existing conversation.
-
-**What I did not verify:** an actual live response from the Claude API. I don't have
-an Anthropic API key in this environment. The request shape (system prompt, message
-history mapped from stored `user`/`assistant` rows, `max_tokens`) matches the
-`@anthropic-ai/sdk` `messages.create` API, but I'd want to see a real response before
-calling the AI integration fully proven — please test this with your own key before
-relying on it.
+- A **live Claude call** with a real API key: signed up, sent "In one short sentence,
+  what is the Atlas system in Greek mythology known for?", and confirmed both the
+  stored user message and a correct, on-topic assistant reply in Postgres. This also
+  caught a real bug — `claude-sonnet-4-20250514` (the model id from the original
+  spec/`.env.example`) returns a `not_found_error` on a current API key; I switched
+  the default to `claude-sonnet-4-5-20250929`, a currently-available model, and left
+  `ANTHROPIC_MODEL` overridable per the spec. If you use an older key/org, check
+  `GET /v1/models` for what's actually available to you.
 
 **Decisions I made that weren't fully specified:**
 - **JWT sessions, no Account/Session tables.** The spec asked for whatever "the
